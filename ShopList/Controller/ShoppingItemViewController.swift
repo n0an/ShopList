@@ -8,6 +8,7 @@
 
 import UIKit
 import KRProgressHUD
+import SwipeCellKit
 
 class ShoppingItemViewController: UIViewController {
     
@@ -21,7 +22,7 @@ class ShoppingItemViewController: UIViewController {
     var shoppingItems: [ShoppingItem] = []
     var boughtItems: [ShoppingItem] = []
     
-//    var defaultOption = SwipeTableOptions()
+    var defaultOption = SwipeTableOptions()
     var isSwipeRightEnable = true
     
     override func viewDidLoad() {

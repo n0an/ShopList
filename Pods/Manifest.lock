@@ -36,12 +36,24 @@ PODS:
   - KRActivityIndicatorView (2.0.2)
   - KRProgressHUD (3.0.0):
     - KRActivityIndicatorView (~> 2.0.2)
+  - SwipeCellKit (1.9.0)
 
 DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
   - KRProgressHUD
+  - SwipeCellKit (from `https://github.com/jerkoch/SwipeCellKit.git`, branch `develop`)
+
+EXTERNAL SOURCES:
+  SwipeCellKit:
+    :branch: develop
+    :git: https://github.com/jerkoch/SwipeCellKit.git
+
+CHECKOUT OPTIONS:
+  SwipeCellKit:
+    :commit: 62bbaac2d6fc9fa3f52541dc7e73d9766d438992
+    :git: https://github.com/jerkoch/SwipeCellKit.git
 
 SPEC CHECKSUMS:
   Firebase: c7ad0731eab26d18a3fc547dd048b0f7cd9c63ae
@@ -54,7 +66,8 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 30d874b96d0d76028f61fbd122801e3f030d47db
   KRActivityIndicatorView: 2a9d5442ba8da6274db3afdf46aeaef7cf6dd8ad
   KRProgressHUD: 14f9fad06080bdb1e59569104a8eda654c83e813
+  SwipeCellKit: c5199021f354565c955fe8e2f45f79d3b1713e41
 
-PODFILE CHECKSUM: b6cf084c59605c150a82a02f29c2b20189fdf178
+PODFILE CHECKSUM: e26416cd7febcabdeaa2ccbe5047e03e536e2c42
 
 COCOAPODS: 1.1.1
