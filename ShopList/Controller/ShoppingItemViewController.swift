@@ -37,14 +37,13 @@ class ShoppingItemViewController: UIViewController {
 extension ShoppingItemViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return allLists.count
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ShoppingListCell", for: indexPath) as! ListCell
         
-        let shoppingList = allLists[indexPath.row]
         
         cell.bindDate(item: shoppingList)
         

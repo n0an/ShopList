@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KRProgressHUD
 
 class AllListsViewController: UIViewController {
     
@@ -29,8 +30,8 @@ class AllListsViewController: UIViewController {
         let shoppingList = ShoppingList(name: nameTextField.text!)
         shoppingList.saveItemInBackground(shoppingList: shoppingList) { (error) in
             if let error = error {
-                //                KRProgressHUD.showError
-                print(error.localizedDescription)
+                KRProgressHUD.showError(withMessage: error.localizedDescription)
+                
                 return
             }
         }
@@ -53,8 +54,8 @@ class AllListsViewController: UIViewController {
             if self.nameTextField.text != "" {
                 self.createShoppingList()
             } else {
-                // KRProgressHUD.showWarning("Name is empty")
-                print("Name is empty")
+                KRProgressHUD.showWarning(withMessage: "Name is empty")
+                
                 
             }
         }
