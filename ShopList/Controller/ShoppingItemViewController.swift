@@ -25,7 +25,11 @@ class ShoppingItemViewController: UIViewController {
 
     @IBAction func actionAddButtonTapped(_ sender: Any) {
         
+        let addItemVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddItemViewController") as! AddItemViewController
         
+        addItemVC.shoppingList = shoppingList
+        
+        self.present(addItemVC, animated: true, completion: nil)
         
     }
     
@@ -42,12 +46,12 @@ extension ShoppingItemViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ShoppingListCell", for: indexPath) as! ListCell
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "ShoppingListCell", for: indexPath) as! ListCell
+//
+//
+//        cell.bindDate(item: shoppingList)
         
-        
-        cell.bindDate(item: shoppingList)
-        
-        return cell
+        return UITableViewCell()
     }
     
 }
