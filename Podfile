@@ -11,7 +11,7 @@ pod 'Firebase/Database'
 pod 'Firebase/Auth'
 
 #pod 'SwipeCellKit'
-#pod 'KRProgressHUD'
+pod 'KRProgressHUD'
 #pod 'SwipeCellKit', :git => 'https://github.com/jerkoch/SwipeCellKit.git', :branch => 'develop'
 
 end

@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '2FD251F7C9517251F302021135220C67'
-               BlueprintName = 'Pods-ShopList'
+               BlueprintIdentifier = 'DBF6426868E6CA9AA6D5A4C0BAF80A9F'
+               BlueprintName = 'KRProgressHUD'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Pods-ShopList.framework'>
+               BuildableName = 'KRProgressHUD.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

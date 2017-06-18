@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '2FD251F7C9517251F302021135220C67'
-               BlueprintName = 'Pods-ShopList'
+               BlueprintIdentifier = '9C4AED8E7F0E8047550BDB01102B0913'
+               BlueprintName = 'KRActivityIndicatorView'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Pods-ShopList.framework'>
+               BuildableName = 'KRActivityIndicatorView.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
