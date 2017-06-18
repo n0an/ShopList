@@ -23,6 +23,18 @@ class AllListsViewController: UIViewController {
         
         loadList()
     }
+    
+    // MARK: - HELPER METHODS
+    func createShoppingList() {
+        let shoppingList = ShoppingList(name: nameTextField.text!)
+        shoppingList.saveItemInBackground(shoppingList: shoppingList) { (error) in
+            if let error = error {
+                //                KRProgressHUD.showError
+                print(error.localizedDescription)
+                return
+            }
+        }
+    }
 
     // MARK: - ACTIONS
     @IBAction func actionAddButtonTapped(_ sender: Any) {
@@ -75,22 +87,19 @@ class AllListsViewController: UIViewController {
             } else {
                 print("no snap")
             }
-            
-            
         }
-        
-        
     }
     
-    // MARK: - HELPER METHODS
-    func createShoppingList() {
-        let shoppingList = ShoppingList(name: nameTextField.text!)
-        shoppingList.saveItemInBackground(shoppingList: shoppingList) { (error) in
-            if let error = error {
-//                KRProgressHUD.showError
-                print(error.localizedDescription)
-                return
-            }
+    // MARK: - NAVIGATION
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueShoppingListToShoppingItem" {
+            let indexPath = sender as! IndexPath
+            let shoppingList = allLists[indexPath.row]
+            
+            let destinationVC = segue.destination as! ShoppingItemViewController
+            destinationVC.shoppingList = shoppingList
+            
+            
         }
     }
     
@@ -120,4 +129,34 @@ extension AllListsViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 extension AllListsViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        self.performSegue(withIdentifier: "segueShoppingListToShoppingItem", sender: indexPath)
+        
+    }
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -77,6 +77,14 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		1803C8E01EF6EB8B00012301 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1803C8DE1EF6CDFD00012301 /* ListCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		1830087E1EF5C0BF0047BBC5 = {
 			isa = PBXGroup;
 			children = (
@@ -99,9 +107,9 @@
 			isa = PBXGroup;
 			children = (
 				1830088A1EF5C0BF0047BBC5 /* AppDelegate.swift */,
-				1803C8DE1EF6CDFD00012301 /* ListCell.swift */,
-				1803C8DD1EF6C5AC00012301 /* Controller */,
 				1803C8DB1EF6C59E00012301 /* Model */,
+				1803C8E01EF6EB8B00012301 /* View */,
+				1803C8DD1EF6C5AC00012301 /* Controller */,
 				1803C8DC1EF6C5A200012301 /* Helpers */,
 				1830088E1EF5C0BF0047BBC5 /* Main.storyboard */,
 				183008911EF5C0BF0047BBC5 /* Assets.xcassets */,

@@ -15,7 +15,7 @@ class ShoppingItemViewController: UIViewController {
     
     @IBOutlet weak var totalPriceLabel: UILabel!
     
-    
+    var shoppingList: ShoppingList!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +24,44 @@ class ShoppingItemViewController: UIViewController {
     }
 
     @IBAction func actionAddButtonTapped(_ sender: Any) {
+        
+        
+        
     }
     
 
+}
+
+
+// MARK: - UITableViewDataSource
+extension ShoppingItemViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return allLists.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ShoppingListCell", for: indexPath) as! ListCell
+        
+        let shoppingList = allLists[indexPath.row]
+        
+        cell.bindDate(item: shoppingList)
+        
+        return cell
+    }
+    
+}
+
+// MARK: - UITableViewDelegate
+extension ShoppingItemViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        self.performSegue(withIdentifier: "segueShoppingListToShoppingItem", sender: indexPath)
+        
+    }
+    
 }
