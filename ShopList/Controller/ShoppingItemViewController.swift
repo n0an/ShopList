@@ -8,6 +8,7 @@
 
 import UIKit
 import KRProgressHUD
+import SwipeCellKit
 
 class ShoppingItemViewController: UIViewController {
     
@@ -21,7 +22,7 @@ class ShoppingItemViewController: UIViewController {
     var shoppingItems: [ShoppingItem] = []
     var boughtItems: [ShoppingItem] = []
     
-//    var defaultOption = SwipeTableOptions()
+    var defaultOptions = SwipeTableOptions()
     var isSwipeRightEnable = true
     
     override func viewDidLoad() {
@@ -96,6 +97,9 @@ extension ShoppingItemViewController: UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ShoppingItemCell", for: indexPath) as! ShoppingItemCell
         
+        cell.delegate = self
+        cell.selectedBackgroundView = createSelectedBackgroundView()
+        
         var shoppingItem: ShoppingItem
         
         if indexPath.section == 0 {
@@ -165,6 +169,95 @@ extension ShoppingItemViewController: UITableViewDelegate {
     }
     
     
+    
+}
+
+extension ShoppingItemViewController: SwipeTableViewCellDelegate {
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
+        
+        var shoppingItem: ShoppingItem
+        
+        if indexPath.section == 0 {
+            shoppingItem = shoppingItems[indexPath.row]
+        } else {
+            shoppingItem = boughtItems[indexPath.row]
+        }
+        
+        if orientation == .left {
+            guard isSwipeRightEnable else { return nil }
+            
+            let buyItem = SwipeAction(style: .default, title: nil, handler: { (action, indexPath) in
+                
+                shoppingItem.isBought = !shoppingItem.isBought
+                
+                shoppingItem.updateItemInBackground(shoppingItem: shoppingItem, completion: { (error) in
+                    if let error = error {
+                        KRProgressHUD.showError(withMessage: error.localizedDescription)
+                        return
+                    }
+                })
+                
+                if indexPath.section == 0 {
+                    self.shoppingItems.remove(at: indexPath.row)
+                    self.boughtItems.append(shoppingItem)
+                } else {
+                    self.boughtItems.remove(at: indexPath.row)
+                    self.shoppingItems.append(shoppingItem)
+                }
+                tableView.reloadData()
+            })
+            
+            buyItem.accessibilityLabel = shoppingItem.isBought ? "Buy" : "Return"
+            let descriptor: ActionDescriptor = shoppingItem.isBought ? .returnPurchase : .buy
+            
+            configure(action: buyItem, with: descriptor)
+            
+            return [buyItem]
+        } else {
+            
+            let delete = SwipeAction(style: .destructive, title: nil, handler: { (action, indexPath) in
+                
+                if indexPath.section == 0 {
+                    self.shoppingItems.remove(at: indexPath.row)
+                } else {
+                    self.boughtItems.remove(at: indexPath.row)
+                }
+                
+                shoppingItem.deleteItemInBackground(shoppingItem: shoppingItem)
+                
+                self.tableView.beginUpdates()
+                action.fulfill(with: .delete)
+                self.tableView.endUpdates()
+                
+            })
+            
+            configure(action: delete, with: .trash)
+            return [delete]
+        }
+        
+    }
+    
+    
+    
+    
+    func tableView(_ tableView: UITableView, editActionsOptionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> SwipeTableOptions {
+        
+        var options = SwipeTableOptions()
+        options.expansionStyle = orientation == .left ? .selection : .destructive
+        
+        options.transitionStyle = defaultOptions.transitionStyle
+        options.buttonSpacing = 11
+        
+        return options
+        
+    }
+    
+    
+    func configure(action: SwipeAction, with descriptor: ActionDescriptor) {
+        action.title = descriptor.title()
+        action.image = descriptor.image()
+        action.backgroundColor = descriptor.color
+    }
     
 }
 

@@ -88,10 +88,12 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/GoogleToolboxForMac/GoogleToolboxForMac.framework"
   install_framework "$BUILT_PRODUCTS_DIR/KRActivityIndicatorView/KRActivityIndicatorView.framework"
   install_framework "$BUILT_PRODUCTS_DIR/KRProgressHUD/KRProgressHUD.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SwipeCellKit/SwipeCellKit.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/GTMSessionFetcher/GTMSessionFetcher.framework"
   install_framework "$BUILT_PRODUCTS_DIR/GoogleToolboxForMac/GoogleToolboxForMac.framework"
   install_framework "$BUILT_PRODUCTS_DIR/KRActivityIndicatorView/KRActivityIndicatorView.framework"
   install_framework "$BUILT_PRODUCTS_DIR/KRProgressHUD/KRProgressHUD.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SwipeCellKit/SwipeCellKit.framework"
 fi
