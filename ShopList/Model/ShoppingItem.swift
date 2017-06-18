@@ -59,6 +59,17 @@ class ShoppingItem {
         
     }
     
+    func updateItemInBackground(shoppingItem: ShoppingItem, completion: @escaping (_ error: Error?) -> Void) {
+        let ref = firebase.child(kSHOPPINGITEM).child(shoppingItem.shoppingListId).child(shoppingItem.shoppingItemId)
+        
+        
+        ref.setValue(toDictionary(item: shoppingItem)) { (error, ref) in
+            completion(error)
+        }
+        
+    }
+    
+    
     func toDictionary(item: ShoppingItem) -> [String: Any] {
         
         let dict: [String: Any] =
