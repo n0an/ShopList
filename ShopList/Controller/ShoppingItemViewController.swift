@@ -25,6 +25,8 @@ class ShoppingItemViewController: UIViewController {
     var defaultOptions = SwipeTableOptions()
     var isSwipeRightEnable = true
     
+    var totalPrice: Float!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -53,7 +55,8 @@ class ShoppingItemViewController: UIViewController {
                         self.shoppingItems.append(shoppingItem)
                     }
                     
-                    self.tableView.reloadData()
+                    self.calculateTotal()
+                    self.updateUI()
                 }
                 
             } else {
@@ -61,6 +64,42 @@ class ShoppingItemViewController: UIViewController {
             }
             
         }
+    }
+    
+    func updateUI() {
+        
+        self.itemsLeftLabel.text = "Items Left: \(self.shoppingItems.count)"
+        let formattedTotalPrice = String(format: "%.2f", self.totalPrice)
+        self.totalPriceLabel.text = "Total Price: \(formattedTotalPrice)"
+        
+        self.tableView.reloadData()
+    }
+    
+    func calculateTotal() {
+        
+        self.totalPrice = 0
+        
+        for item in boughtItems {
+            self.totalPrice = self.totalPrice + item.price
+        }
+        
+        for item in shoppingItems {
+            self.totalPrice = self.totalPrice +  item.price
+        }
+        
+        let formattedTotalPrice = String(format: "%.2f", self.totalPrice)
+        self.totalPriceLabel.text = "Total Price: \(formattedTotalPrice)"
+        
+        shoppingList.totalPrice = self.totalPrice
+        shoppingList.totalItems = self.boughtItems.count + self.shoppingItems.count
+        
+        shoppingList.updateItemInBackground(shoppingList: shoppingList) { (error) in
+            if let error = error {
+                KRProgressHUD.showError(withMessage: error.localizedDescription)
+                return
+            }
+        }
+        
     }
     
     
@@ -146,13 +185,26 @@ extension ShoppingItemViewController: UITableViewDelegate {
         
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//
-//        tableView.deselectRow(at: indexPath, animated: true)
-//
-//        self.performSegue(withIdentifier: "segueShoppingListToShoppingItem", sender: indexPath)
-//
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        var shoppingItem: ShoppingItem
+        
+        if indexPath.section == 0 {
+            shoppingItem = shoppingItems[indexPath.row]
+        } else {
+            shoppingItem = boughtItems[indexPath.row]
+        }
+        
+        let addItemVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddItemViewController") as! AddItemViewController
+        
+        addItemVC.shoppingList = shoppingList
+        addItemVC.shoppingItem = shoppingItem
+        
+        self.present(addItemVC, animated: true, completion: nil)
+        
+    }
     
     func titleViewForTable(title: String) -> UIView {
         

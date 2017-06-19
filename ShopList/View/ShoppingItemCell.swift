@@ -23,9 +23,25 @@ class ShoppingItemCell: SwipeTableViewCell {
         
         nameLabel.text = item.name
         extraInfoLabel.text = item.info
+        
         priceLabel.text = String(format: "$ %.2f", item.price)
         quantityLabel.text = item.quantity
-        itemImageView.image = #imageLiteral(resourceName: "ShoppingCartFilled")
+        
+        if item.image != "" {
+            
+            if let image = imageFromData(pictureData: item.image) {
+                let scaledImage = image.scaleImageToSize(newSize: itemImageView.frame.size)
+                itemImageView.image = scaledImage.circleMasked
+            }
+            
+        } else {
+            let newImage = UIImage(named: "ShoppingCartEmpty")!.scaleImageToSize(newSize: itemImageView.frame.size)
+            
+            itemImageView.image = newImage.circleMasked
+        }
+        
+        
+        
         
         
     }

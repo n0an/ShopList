@@ -369,6 +369,9 @@
                                     <constraint firstAttribute="width" constant="26" id="Z9Q-PC-q8K"/>
                                 </constraints>
                                 <state key="normal" image="PlusFilled"/>
+                                <connections>
+                                    <action selector="addImageButtonTapped:" destination="Wt8-1e-FfD" eventType="touchUpInside" id="in7-I0-ZJU"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KMn-3H-dpZ">
                                 <rect key="frame" x="16" y="301" width="343" height="30"/>

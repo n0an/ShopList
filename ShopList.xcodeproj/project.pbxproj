@@ -22,6 +22,7 @@
 		1830088B1EF5C0BF0047BBC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1830088A1EF5C0BF0047BBC5 /* AppDelegate.swift */; };
 		183008901EF5C0BF0047BBC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1830088E1EF5C0BF0047BBC5 /* Main.storyboard */; };
 		183008921EF5C0BF0047BBC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 183008911EF5C0BF0047BBC5 /* Assets.xcassets */; };
+		1845A8EC1EF84EAA00930F04 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1845A8EB1EF84EAA00930F04 /* Camera.swift */; };
 		810605F4352DDEEB7F4360FE /* Pods_ShopList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81404F97068B4A0265F29BE8 /* Pods_ShopList.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		1830088F1EF5C0BF0047BBC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		183008911EF5C0BF0047BBC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		183008961EF5C0BF0047BBC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1845A8EB1EF84EAA00930F04 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		68801C07C60A74982C25D409 /* Pods-ShopList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopList.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShopList/Pods-ShopList.release.xcconfig"; sourceTree = "<group>"; };
 		81404F97068B4A0265F29BE8 /* Pods_ShopList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShopList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84602FDDCC1713D08D990DC3 /* Pods-ShopList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShopList/Pods-ShopList.debug.xcconfig"; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				1803C8D91EF6C13700012301 /* Utilities.swift */,
+				1845A8EB1EF84EAA00930F04 /* Camera.swift */,
 				181519201EF7065900F157AA /* SwipeTableViewHelpers.swift */,
 				1803C8D71EF6C07B00012301 /* Constants.swift */,
 			);
@@ -279,6 +282,7 @@
 				1815191B1EF6F0CE00F157AA /* ShoppingItem.swift in Sources */,
 				1815191D1EF6F5EF00F157AA /* AddItemViewController.swift in Sources */,
 				181519211EF7065900F157AA /* SwipeTableViewHelpers.swift in Sources */,
+				1845A8EC1EF84EAA00930F04 /* Camera.swift in Sources */,
 				1803C8D61EF6BF1700012301 /* ShoppingList.swift in Sources */,
 				1803C8D01EF6B99800012301 /* AllListsViewController.swift in Sources */,
 				1830088B1EF5C0BF0047BBC5 /* AppDelegate.swift in Sources */,
