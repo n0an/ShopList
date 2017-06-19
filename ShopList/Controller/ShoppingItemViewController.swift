@@ -106,11 +106,27 @@ class ShoppingItemViewController: UIViewController {
     // MARK: - ACTIONS
     @IBAction func actionAddButtonTapped(_ sender: Any) {
         
-        let addItemVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddItemViewController") as! AddItemViewController
+        let optionMenu = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
-        addItemVC.shoppingList = shoppingList
+        let newItemAction = UIAlertAction(title: "New Item", style: .default) { (action) in
+            let addItemVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddItemViewController") as! AddItemViewController
+            
+            addItemVC.shoppingList = self.shoppingList
+            
+            self.present(addItemVC, animated: true, completion: nil)
+        }
         
-        self.present(addItemVC, animated: true, completion: nil)
+        let searchItemAction = UIAlertAction(title: "Search Item", style: .default) { (action) in
+            
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        optionMenu.addAction(newItemAction)
+        optionMenu.addAction(searchItemAction)
+        optionMenu.addAction(cancelAction)
+        
+        self.present(optionMenu, animated: true, completion: nil)
         
     }
     
@@ -224,6 +240,7 @@ extension ShoppingItemViewController: UITableViewDelegate {
     
 }
 
+// MARK: - SwipeTableViewCellDelegate
 extension ShoppingItemViewController: SwipeTableViewCellDelegate {
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
         

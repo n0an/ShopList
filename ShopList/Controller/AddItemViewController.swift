@@ -22,6 +22,8 @@ class AddItemViewController: UIViewController {
     var shoppingItem: ShoppingItem!
     var itemImage: UIImage!
     
+    var addingToList: Bool?
+    
     // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +39,7 @@ class AddItemViewController: UIViewController {
     // MARK: - HELPER METHODS
     func saveItem() {
         
+        var tmpItem: ShoppingItem
         var imageString: String!
         
         if itemImage != nil {
@@ -48,16 +51,36 @@ class AddItemViewController: UIViewController {
             imageString = ""
         }
         
-        let shoppingItem = ShoppingItem(name: nameTextField.text!, info: extraInfoTextField.text!, quantity: quantityTextField.text!, price: Float(priceTextField.text!)!, shoppingListId: shoppingList.id)
-        
-        shoppingItem.image = imageString
-        
-        shoppingItem.saveItemInBackground(shoppingItem: shoppingItem) { (error) in
-            if let error = error {
-                KRProgressHUD.showError(withMessage: error.localizedDescription)
-                return
+        if addingToList! {
+            // add to grocery list only
+            
+            tmpItem = ShoppingItem(name: nameTextField.text!, info: extraInfoTextField.text!, price: Float(priceTextField.text!)!, shoppingListId: "")
+            
+            let groceryItem = GroceryItem(shoppingItem: tmpItem)
+            groceryItem.image = imageString
+            
+            groceryItem.saveItemInBackground(groceryItem: groceryItem, completion: { (error) in
+                if let error = error {
+                    KRProgressHUD.showError(withMessage: error.localizedDescription)
+                }
+            })
+            self.dismiss(animated: true, completion: nil)
+            
+        } else {
+            // add to current shopping list
+            let shoppingItem = ShoppingItem(name: nameTextField.text!, info: extraInfoTextField.text!, quantity: quantityTextField.text!, price: Float(priceTextField.text!)!, shoppingListId: shoppingList.id)
+            
+            shoppingItem.image = imageString
+            
+            shoppingItem.saveItemInBackground(shoppingItem: shoppingItem) { (error) in
+                if let error = error {
+                    KRProgressHUD.showError(withMessage: error.localizedDescription)
+                    return
+                }
             }
+            
         }
+        
         
     }
     
@@ -87,6 +110,7 @@ class AddItemViewController: UIViewController {
                 if let error = error {
                     
                     KRProgressHUD.showError(withMessage: error.localizedDescription)
+                    return
                 }
             }
         }
