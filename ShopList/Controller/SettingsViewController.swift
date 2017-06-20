@@ -25,7 +25,7 @@ class SettingsViewController: UIViewController {
         
         self.signOutButton.layer.cornerRadius = 8
         self.signOutButton.layer.borderWidth = 1
-        self.signOutButton.layer.borderColor = UIColor.blue.cgColor
+        self.signOutButton.layer.borderColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1).cgColor
         
         currencyPickerView = UIPickerView()
         currencyPickerView.delegate = self
@@ -58,7 +58,20 @@ class SettingsViewController: UIViewController {
     
     @IBAction func actionSignOutButtonTapped(_ sender: Any) {
         
-        
+        FUser.logoutUser { (success) in
+            
+            if success {
+                
+                cleanupFirebaseObservers()
+                
+                let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+                
+                self.present(loginVC, animated: true, completion: nil)
+                
+            }
+            
+            
+        }
         
     }
     

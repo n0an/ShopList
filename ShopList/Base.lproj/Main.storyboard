@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="93e-Qh-4I3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KQd-ZI-5He">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -434,7 +434,7 @@
         <!--Login View Controller-->
         <scene sceneID="mVd-ii-53m">
             <objects>
-                <viewController id="KQd-ZI-5He" customClass="LoginViewController" customModule="ShopList" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="KQd-ZI-5He" customClass="LoginViewController" customModule="ShopList" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TR6-NM-RBi"/>
                         <viewControllerLayoutGuide type="bottom" id="s2n-Yk-emC"/>
@@ -469,7 +469,7 @@
                                         <rect key="frame" x="8" y="85" width="234" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TtL-Nr-zQ4">
                                         <rect key="frame" x="8" y="149" width="234" height="30"/>
@@ -532,7 +532,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F06-Yh-7jO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-263.19999999999999" y="-725.48725637181417"/>
+            <point key="canvasLocation" x="-1998" y="36"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="bCS-hj-zkD">
@@ -565,7 +565,7 @@
                                         <rect key="frame" x="8" y="85" width="234" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oLe-Q4-gKC">
                                         <rect key="frame" x="8" y="123" width="234" height="30"/>
@@ -576,6 +576,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mx6-7w-ehy">
                                         <rect key="frame" x="8" y="195" width="234" height="30"/>
                                         <state key="normal" title="Sign Up"/>
+                                        <connections>
+                                            <action selector="actionSignUpButtonTapped:" destination="olU-aN-VAn" eventType="touchUpInside" id="Gg6-Ly-7mj"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7QB-3V-vOd">
                                         <rect key="frame" x="8" y="161" width="234" height="30"/>
@@ -616,6 +619,9 @@
                                 <state key="normal" title="Sign In">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="actioinSignInButtonTapped:" destination="olU-aN-VAn" eventType="touchUpInside" id="SpZ-5b-tQG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.34988158940000003" green="0.85261762139999997" blue="0.98630255460000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -627,15 +633,23 @@
                             <constraint firstItem="KtW-yR-qNb" firstAttribute="centerX" secondItem="Dpb-Vx-D4H" secondAttribute="centerX" id="vlG-mO-dVh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="sbi-cL-2yF" id="oLY-kh-Dme"/>
+                        <outlet property="firstNameTextField" destination="oLe-Q4-gKC" id="X6j-xb-XOD"/>
+                        <outlet property="lastNameTextField" destination="7QB-3V-vOd" id="fHM-AF-93u"/>
+                        <outlet property="passwordTextField" destination="o5p-Ua-WxB" id="Kou-6u-5LI"/>
+                        <outlet property="signInButton" destination="dLB-CL-Esr" id="tBd-8U-IPg"/>
+                        <outlet property="signUpButton" destination="mx6-7w-ehy" id="TNq-Z2-QVf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="exQ-ci-lC9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="574" y="-725"/>
+            <point key="canvasLocation" x="-1161" y="36"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="0Ft-Fz-Ezg">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="93e-Qh-4I3" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="93e-Qh-4I3" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="SX0-N1-kNC">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

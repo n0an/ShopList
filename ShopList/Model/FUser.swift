@@ -60,7 +60,7 @@ class FUser {
     
     class func loginUserWith(email: String, password: String, completion: @escaping (_ error: Error?) -> Void) {
         
-        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+        Auth.auth().signIn(withEmail: email, password: password) { (firUser, error) in
             
             if let error = error {
                 completion(error)
@@ -68,6 +68,13 @@ class FUser {
             }
             
             // Fetch user from Firebase
+            fetchUser(userId: (firUser?.uid)!, completion: { (success) in
+                if success {
+                    print("user logged successfully")
+                }
+            })
+            
+            
             completion(nil)
         }
         
@@ -88,6 +95,8 @@ class FUser {
             
             // Save to Firebase
             saveUserInBackground(fUser: fUser)
+            
+            completion(nil)
             
         }
     }
@@ -175,6 +184,12 @@ func resetUserPassword(email: String) {
     }
 }
 
+func cleanupFirebaseObservers() {
+    firebase.child(kUSER).removeAllObservers()
+    firebase.child(kSHOPPINGLIST).removeAllObservers()
+    firebase.child(kSHOPPINGITEM).removeAllObservers()
+    firebase.child(kGROCERYITEM).removeAllObservers()
+}
 
 
 

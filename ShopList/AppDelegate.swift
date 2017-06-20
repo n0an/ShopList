@@ -8,13 +8,14 @@
 
 import UIKit
 import Firebase
-//import FirebaseDatabase
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    var firstLoad: Bool?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -22,7 +23,45 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         Database.database().isPersistenceEnabled = true
         
+        UINavigationBar.appearance().barTintColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
+        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor.rawValue: UIColor.white]
+        
+        loadUserDefaults()
+        
+        Auth.auth().addStateDidChangeListener { (auth, user) in
+            
+            if let user = user {
+                if userDefaults.object(forKey: kCURRENTUSER) != nil {
+                    self.goToApp()
+                }
+            }
+            
+        }
+        
         return true
+    }
+    
+    func loadUserDefaults() {
+        firstLoad = userDefaults.bool(forKey: kFIRSTRUN)
+        
+        if !firstLoad! {
+            userDefaults.set(true, forKey: kFIRSTRUN)
+            userDefaults.set("$", forKey: kCURRENCY)
+            userDefaults.synchronize()
+        }
+    }
+    
+    func goToApp() {
+        
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainTabBarController") as! UITabBarController
+        
+        vc.selectedIndex = 0
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = vc
+        self.window?.makeKeyAndVisible()
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

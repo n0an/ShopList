@@ -52,12 +52,12 @@ class SearchItemViewController: UIViewController {
         super.viewWillAppear(animated)
         
         self.tableView.reloadData()
-        self.tableView.setContentOffset(CGPoint(x: 0.0, y: 44.0), animated: true)
+//        self.tableView.setContentOffset(CGPoint(x: 0.0, y: 44.0), animated: true)
     }
     
     // MARK: - HELPER METHODS
     func loadGroceryItems() {
-        firebase.child(kGROCERYITEM).child("1234").observe(.value) { (snapshot) in
+        firebase.child(kGROCERYITEM).child(FUser.currentId()).observe(.value) { (snapshot) in
             
             self.groceryItems.removeAll()
             

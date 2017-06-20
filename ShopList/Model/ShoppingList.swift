@@ -23,7 +23,7 @@ class ShoppingList {
         self.totalItems = 0
         self.id = id
         self.date = Date()
-        self.ownerId = "1234"
+        self.ownerId = FUser.currentId()
         
     }
     
@@ -37,7 +37,7 @@ class ShoppingList {
     }
     
     func saveItemInBackground(shoppingList: ShoppingList, completion: @escaping (_ error: Error?) -> Void) {
-        let ref = firebase.child(kSHOPPINGLIST).child("1234").childByAutoId()
+        let ref = firebase.child(kSHOPPINGLIST).child(FUser.currentId()).childByAutoId()
         
         shoppingList.id = ref.key
         
@@ -48,7 +48,7 @@ class ShoppingList {
     }
     
     func updateItemInBackground(shoppingList: ShoppingList, completion: @escaping (_ error: Error?) -> Void) {
-        let ref = firebase.child(kSHOPPINGLIST).child("1234").child(shoppingList.id)
+        let ref = firebase.child(kSHOPPINGLIST).child(FUser.currentId()).child(shoppingList.id)
         
         
         ref.setValue(toDictionary(item: shoppingList)) { (error, ref) in
@@ -59,7 +59,7 @@ class ShoppingList {
     
     
     func deleteItemInBackground(shoppingList: ShoppingList) {
-        let ref = firebase.child(kSHOPPINGLIST).child("1234").child(shoppingList.id)
+        let ref = firebase.child(kSHOPPINGLIST).child(FUser.currentId()).child(shoppingList.id)
         
         ref.removeValue()
         

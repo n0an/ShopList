@@ -22,7 +22,7 @@ class AllListsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        KRProgressHUD.dismiss()
         
         loadList()
     }
@@ -71,7 +71,7 @@ class AllListsViewController: UIViewController {
     
     func loadList() {
         
-        firebase.child(kSHOPPINGLIST).child("1234").observe(.value) { (snapshot) in
+        firebase.child(kSHOPPINGLIST).child(FUser.currentId()).observe(.value) { (snapshot) in
             
             self.allLists.removeAll()
             
