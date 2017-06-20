@@ -44,7 +44,13 @@ class SettingsViewController: UIViewController {
     
     func updateUI() {
         
-        currencyTextField.text = userDefaults.object(forKey: kCURRENCY) as! String
+        var currency: String = "$"
+        
+        if let curr = userDefaults.value(forKey: kCURRENCY) as? String {
+            currency = curr
+        }
+        
+        currencyTextField.text = currency
         currencyString = currencyTextField.text!
         
     }

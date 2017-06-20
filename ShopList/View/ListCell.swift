@@ -20,10 +20,16 @@ class ListCell: UITableViewCell {
         let currentDateFormatter = dateFormatter()
         currentDateFormatter.dateFormat = "dd/MM/YYYY"
         
+        var currency: String = "$"
+        
+        if let curr = userDefaults.value(forKey: kCURRENCY) as? String {
+            currency = curr
+        }
+        
         nameLabel.text = item.name
         totalItemsLabel.text = "\(item.totalItems) items"
         let totalPriceString = String(format: "%.2f", item.totalPrice)
-        totalPriceLabel.text = "Total $ \(totalPriceString)"
+        totalPriceLabel.text = "Total \(currency) \(totalPriceString)"
         dateLabel.text = currentDateFormatter.string(from: item.date)
         
     }

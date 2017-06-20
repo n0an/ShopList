@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1587002D1EF9AF240072531D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1587002C1EF9AF240072531D /* LoginViewController.swift */; };
+		1587002F1EF9AF2E0072531D /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1587002E1EF9AF2E0072531D /* SignupViewController.swift */; };
+		158700321EF9B1910072531D /* FUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158700311EF9B1910072531D /* FUser.swift */; };
 		1803C8D01EF6B99800012301 /* AllListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1803C8CF1EF6B99800012301 /* AllListsViewController.swift */; };
 		1803C8D11EF6BA8400012301 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1803C8CE1EF6B6D700012301 /* GoogleService-Info.plist */; };
 		1803C8D21EF6BABC00012301 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 183008961EF5C0BF0047BBC5 /* Info.plist */; };
@@ -30,6 +33,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1587002C1EF9AF240072531D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1587002E1EF9AF2E0072531D /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		158700311EF9B1910072531D /* FUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FUser.swift; sourceTree = "<group>"; };
 		1803C8CE1EF6B6D700012301 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1803C8CF1EF6B99800012301 /* AllListsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllListsViewController.swift; sourceTree = "<group>"; };
 		1803C8D31EF6BCBE00012301 /* ShoppingItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItemViewController.swift; sourceTree = "<group>"; };
@@ -67,10 +73,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		158700301EF9AF350072531D /* Welcome Screens */ = {
+			isa = PBXGroup;
+			children = (
+				1587002C1EF9AF240072531D /* LoginViewController.swift */,
+				1587002E1EF9AF2E0072531D /* SignupViewController.swift */,
+			);
+			path = "Welcome Screens";
+			sourceTree = "<group>";
+		};
 		1803C8DB1EF6C59E00012301 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				1803C8D51EF6BF1700012301 /* ShoppingList.swift */,
+				158700311EF9B1910072531D /* FUser.swift */,
 				1815191A1EF6F0CE00F157AA /* ShoppingItem.swift */,
 				1845A8EF1EF85E9800930F04 /* GroceryItem.swift */,
 			);
@@ -91,6 +107,7 @@
 		1803C8DD1EF6C5AC00012301 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				158700301EF9AF350072531D /* Welcome Screens */,
 				1803C8CF1EF6B99800012301 /* AllListsViewController.swift */,
 				1845A8F11EF98DA400930F04 /* SettingsViewController.swift */,
 				1815191C1EF6F5EF00F157AA /* AddItemViewController.swift */,
@@ -294,8 +311,11 @@
 				1845A8F21EF98DA400930F04 /* SettingsViewController.swift in Sources */,
 				1815191D1EF6F5EF00F157AA /* AddItemViewController.swift in Sources */,
 				181519211EF7065900F157AA /* SwipeTableViewHelpers.swift in Sources */,
+				1587002F1EF9AF2E0072531D /* SignupViewController.swift in Sources */,
 				1845A8EC1EF84EAA00930F04 /* Camera.swift in Sources */,
+				1587002D1EF9AF240072531D /* LoginViewController.swift in Sources */,
 				1803C8D61EF6BF1700012301 /* ShoppingList.swift in Sources */,
+				158700321EF9B1910072531D /* FUser.swift in Sources */,
 				1803C8D01EF6B99800012301 /* AllListsViewController.swift in Sources */,
 				1830088B1EF5C0BF0047BBC5 /* AppDelegate.swift in Sources */,
 			);

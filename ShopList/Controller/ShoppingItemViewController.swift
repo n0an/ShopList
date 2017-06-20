@@ -27,8 +27,12 @@ class ShoppingItemViewController: UIViewController {
     
     var totalPrice: Float!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        totalPrice = shoppingList.totalPrice
         
         loadShoppingItems()
     }
@@ -66,9 +70,16 @@ class ShoppingItemViewController: UIViewController {
     
     func updateUI() {
         
+        var currency: String = "$"
+        
+        if let curr = userDefaults.value(forKey: kCURRENCY) as? String {
+            currency = curr
+        }
+        
         self.itemsLeftLabel.text = "Items Left: \(self.shoppingItems.count)"
         let formattedTotalPrice = String(format: "%.2f", self.totalPrice)
-        self.totalPriceLabel.text = "Total Price: \(formattedTotalPrice)"
+        self.totalPriceLabel.text = "Total Price: \(currency) \(formattedTotalPrice)"
+        
         
         self.tableView.reloadData()
     }

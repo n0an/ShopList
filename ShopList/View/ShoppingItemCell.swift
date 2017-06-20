@@ -26,7 +26,13 @@ class ShoppingItemCell: SwipeTableViewCell {
         nameLabel.text = item.name
         extraInfoLabel.text = item.info
         
-        priceLabel.text = String(format: "$ %.2f", item.price)
+        var currency: String = "$"
+        
+        if let curr = userDefaults.value(forKey: kCURRENCY) as? String {
+            currency = curr
+        }
+        
+        priceLabel.text = String(format: "\(currency) %.2f", item.price)
         quantityLabel.text = item.quantity
         
         quantityBackgroundView.layer.cornerRadius = quantityBackgroundView.frame.width / 2.0
@@ -51,7 +57,13 @@ class ShoppingItemCell: SwipeTableViewCell {
         nameLabel.text = item.name
         extraInfoLabel.text = item.info
         
-        priceLabel.text = String(format: "$ %.2f", item.price)
+        var currency: String = "$"
+        
+        if let curr = userDefaults.value(forKey: kCURRENCY) as? String {
+            currency = curr
+        }
+        
+        priceLabel.text = String(format: "\(currency) %.2f", item.price)
         
         if item.image != "" {
             if let image = imageFromData(pictureData: item.image) {
