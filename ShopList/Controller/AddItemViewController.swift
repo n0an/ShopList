@@ -20,6 +20,7 @@ class AddItemViewController: UIViewController {
     
     var shoppingList: ShoppingList!
     var shoppingItem: ShoppingItem!
+    var groceryItem: GroceryItem!
     var itemImage: UIImage!
     
     var addingToList: Bool?
@@ -31,7 +32,7 @@ class AddItemViewController: UIViewController {
         let image = UIImage(named: "ShoppingCartEmpty")?.scaleImageToSize(newSize: itemImageView.frame.size)
         itemImageView.image = image?.circleMasked
         
-        if shoppingItem != nil {
+        if shoppingItem != nil || groceryItem != nil {
             updateUI()
         }
     }
@@ -79,8 +80,37 @@ class AddItemViewController: UIViewController {
                 }
             }
             
+            showListNotification(shoppingItem: shoppingItem)
+        }
+    }
+    
+    func showListNotification(shoppingItem: ShoppingItem) {
+        let alert = UIAlertController(title: "Shopping Items", message: "Do you want to add this item to your items", preferredStyle: .alert)
+        
+        let noAction = UIAlertAction(title: "No", style: .cancel) { (action) in
+            self.dismiss(animated: true, completion: nil)
         }
         
+        let yesAction = UIAlertAction(title: "Yes", style: .destructive) { (action) in
+            // save to grocery list
+            
+            let groceryItem = GroceryItem(shoppingItem: shoppingItem)
+            
+            groceryItem.saveItemInBackground(groceryItem: groceryItem, completion: { (error) in
+                if let error = error {
+                    KRProgressHUD.showError(withMessage: error.localizedDescription)
+                    return
+                }
+            })
+            
+            self.dismiss(animated: true, completion: nil)
+            
+        }
+        
+        alert.addAction(noAction)
+        alert.addAction(yesAction)
+        
+        self.present(alert, animated: true, completion: nil)
         
     }
     
@@ -113,38 +143,68 @@ class AddItemViewController: UIViewController {
                     return
                 }
             }
+        } else if groceryItem != nil {
+            
+            groceryItem.name = nameTextField.text!
+            groceryItem.info = extraInfoTextField.text!
+            groceryItem.price = Float(priceTextField.text!)!
+            
+            groceryItem.image = imageString
+            
+            groceryItem.updateItemInBackground(groceryItem: groceryItem) { (error) in
+                if let error = error {
+                    
+                    KRProgressHUD.showError(withMessage: error.localizedDescription)
+                    return
+                }
+            }
+            
         }
         
+        self.dismiss(animated: true, completion: nil)
     }
     
     func updateUI() {
         
-        guard shoppingItem != nil else {
-            return
-        }
-        
-        self.nameTextField.text = self.shoppingItem.name
-        self.extraInfoTextField.text = self.shoppingItem.info
-        self.quantityTextField.text = self.shoppingItem.quantity
-        self.priceTextField.text = String(shoppingItem.price)
-        
-        if shoppingItem.image != "" {
+        if shoppingItem != nil {
             
-            if let image = imageFromData(pictureData: shoppingItem.image) {
-                let scaledImage = image.scaleImageToSize(newSize: itemImageView.frame.size)
-                itemImageView.image = scaledImage.circleMasked
+            self.nameTextField.text = self.shoppingItem.name
+            self.extraInfoTextField.text = self.shoppingItem.info
+            self.quantityTextField.text = self.shoppingItem.quantity
+            self.priceTextField.text = String(shoppingItem.price)
+            
+            if shoppingItem.image != "" {
+                
+                if let image = imageFromData(pictureData: shoppingItem.image) {
+                    let scaledImage = image.scaleImageToSize(newSize: itemImageView.frame.size)
+                    itemImageView.image = scaledImage.circleMasked
+                    itemImage = scaledImage
+                }
+            }
+        } else if groceryItem != nil {
+            self.nameTextField.text = self.groceryItem.name
+            self.extraInfoTextField.text = self.groceryItem.info
+            self.quantityTextField.text = ""
+            self.priceTextField.text = String(groceryItem.price)
+            
+            if groceryItem.image != "" {
+                
+                if let image = imageFromData(pictureData: groceryItem.image) {
+                    let scaledImage = image.scaleImageToSize(newSize: itemImageView.frame.size)
+                    itemImageView.image = scaledImage.circleMasked
+                    itemImage = scaledImage
+                }
             }
         }
+        
     }
-    
-    
     
     // MARK: - ACTIONS
     @IBAction func actionSaveButtonTapped(_ sender: Any) {
         if nameTextField.text != "" &&
             priceTextField.text != "" {
             
-            if shoppingItem != nil {
+            if shoppingItem != nil || groceryItem != nil {
                 
                 self.updateItem()
                 
@@ -156,7 +216,7 @@ class AddItemViewController: UIViewController {
             KRProgressHUD.showWarning(withMessage: "Empty fields")
         }
         
-        self.dismiss(animated: true, completion: nil)
+//        self.dismiss(animated: true, completion: nil)
         
     }
     

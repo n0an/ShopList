@@ -33,7 +33,6 @@ class ShoppingItemViewController: UIViewController {
         loadShoppingItems()
     }
     
-    
     // MARK: - HELPER METHODS
     func loadShoppingItems() {
         firebase.child(kSHOPPINGITEM).child(shoppingList.id).queryOrdered(byChild: kSHOPPINGLISTID).queryEqual(toValue: shoppingList.id).observe(.value) { (snapshot) in
@@ -62,7 +61,6 @@ class ShoppingItemViewController: UIViewController {
             } else {
                 print("no snap")
             }
-            
         }
     }
     
@@ -99,9 +97,7 @@ class ShoppingItemViewController: UIViewController {
                 return
             }
         }
-        
     }
-    
     
     // MARK: - ACTIONS
     @IBAction func actionAddButtonTapped(_ sender: Any) {
@@ -112,12 +108,19 @@ class ShoppingItemViewController: UIViewController {
             let addItemVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddItemViewController") as! AddItemViewController
             
             addItemVC.shoppingList = self.shoppingList
+            addItemVC.addingToList = false
             
             self.present(addItemVC, animated: true, completion: nil)
         }
         
         let searchItemAction = UIAlertAction(title: "Search Item", style: .default) { (action) in
             
+            let searchVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SearchItemViewController") as! SearchItemViewController
+            
+            searchVC.delegate = self
+            searchVC.clickToEdit = false
+            
+            self.present(searchVC, animated: true, completion: nil)
         }
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
@@ -127,9 +130,23 @@ class ShoppingItemViewController: UIViewController {
         optionMenu.addAction(cancelAction)
         
         self.present(optionMenu, animated: true, completion: nil)
-        
     }
-    
+}
+
+// MARK: - +++ SearchItemViewControllerDelegate +++
+extension ShoppingItemViewController: SearchItemViewControllerDelegate {
+    func didChooseItem(groceryItem: GroceryItem) {
+        
+        let shoppingItem = ShoppingItem(groceryItem: groceryItem)
+        
+        shoppingItem.shoppingListId = shoppingList.id
+        
+        shoppingItem.saveItemInBackground(shoppingItem: shoppingItem) { (error) in
+            if let error = error {
+                KRProgressHUD.showError(withMessage: error.localizedDescription)
+            }
+        }
+    }
 }
 
 
