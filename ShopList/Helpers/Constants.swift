@@ -11,6 +11,8 @@ import Firebase
 
 var firebase = Database.database().reference()
 
+let userDefaults = UserDefaults.standard
+
 public let kSHOPPINGLISTID = "shoppingListId"
 public let kSHOPPINGITEMID = "shoppingItemId"
 public let kGROCERYITEMID = "groceryItemId"
