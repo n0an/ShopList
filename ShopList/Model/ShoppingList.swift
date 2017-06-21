@@ -57,15 +57,12 @@ class ShoppingList {
         
     }
     
-    
     func deleteItemInBackground(shoppingList: ShoppingList) {
         let ref = firebase.child(kSHOPPINGLIST).child(FUser.currentId()).child(shoppingList.id)
         
         ref.removeValue()
         
     }
-    
-    
     
     func toDictionary(item: ShoppingList) -> [String: Any] {
         
@@ -80,26 +77,7 @@ class ShoppingList {
         return dict
     }
     
-    
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
