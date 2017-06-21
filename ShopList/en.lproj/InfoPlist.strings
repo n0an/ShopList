@@ -1,0 +1,11 @@
+/* 
+  InfoPlist.strings
+  ShopList
+
+  Created by Anton Novoselov on 21/06/2017.
+  Copyright © 2017 Anton Novoselov. All rights reserved.
+*/
+"NSCameraUsageDescription" = "Need access to camera to create item image";
+
+"NSPhotoLibraryUsageDescription" = "Need access to photo library to provide saving and selecting photos from photo library";
+

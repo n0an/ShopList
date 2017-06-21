@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  ShopList
+
+  Created by Anton Novoselov on 21/06/2017.
+  Copyright © 2017 Anton Novoselov. All rights reserved.
+*/
+"NSCameraUsageDescription" = "Приложению необходим доступ к камере, чтобы создать фото покупки";
+
+"NSPhotoLibraryUsageDescription" = "Приложению необходим доступ к библиотеке фотографий, для сохранения выбранных фотографий, а также для выбора фото профиля в чате";

@@ -26,6 +26,7 @@ class ListCell: UITableViewCell {
             currency = curr
         }
         
+        
         nameLabel.text = item.name
         totalItemsLabel.text = "\(item.totalItems) " + NSLocalizedString("items", comment: "")
         let totalPriceString = String(format: "%.2f", item.totalPrice)

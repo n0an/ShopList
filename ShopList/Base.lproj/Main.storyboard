@@ -189,7 +189,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.1772384384" green="0.85165066899999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.25882352941176467" green="0.75686274509803919" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="fNi-2A-ah3" firstAttribute="leading" secondItem="BEu-Rd-wqV" secondAttribute="leading" id="CQ1-MD-ea9"/>
                                                         <constraint firstItem="fNi-2A-ah3" firstAttribute="top" secondItem="BEu-Rd-wqV" secondAttribute="top" id="O2H-ko-cu0"/>
@@ -338,7 +338,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.17723843837601039" green="0.8516506689733816" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.25882352941176467" green="0.75686274509803919" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="3xR-DN-Uwv"/>
                                     <constraint firstItem="ZLJ-4M-dd6" firstAttribute="leading" secondItem="WbI-bZ-gxA" secondAttribute="leading" constant="8" id="5at-0I-82L"/>
@@ -449,7 +449,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="seS-XX-dKO">
                                         <rect key="frame" x="8" y="15" width="234" height="24"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                        <color key="textColor" red="0.34988158940000003" green="0.85261762139999997" blue="0.98630255460000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.25882352941176467" green="0.75686274509803919" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kW2-gf-VxP">
@@ -513,7 +513,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.34988158941268921" green="0.85261762142181396" blue="0.98630255460739136" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.25882352941176467" green="0.75686274509803919" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="UGV-C1-h1p" firstAttribute="top" secondItem="TR6-NM-RBi" secondAttribute="bottom" constant="138" id="05h-nx-WrA"/>
                             <constraint firstItem="s2n-Yk-emC" firstAttribute="top" secondItem="TqF-tv-tkO" secondAttribute="bottom" constant="8" id="5Rq-w7-3st"/>
@@ -552,7 +552,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZQ-BF-xJM">
                                         <rect key="frame" x="8" y="15" width="234" height="24"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                        <color key="textColor" red="0.34988158940000003" green="0.85261762139999997" blue="0.98630255460000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.25882352941176467" green="0.75686274509803919" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sbi-cL-2yF">
@@ -624,7 +624,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.34988158940000003" green="0.85261762139999997" blue="0.98630255460000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.25882352941176467" green="0.75686274509803919" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="KtW-yR-qNb" firstAttribute="top" secondItem="Vog-Vd-upM" secondAttribute="bottom" constant="138" id="BXA-zQ-M86"/>
                             <constraint firstItem="dLB-CL-Esr" firstAttribute="leading" secondItem="Dpb-Vx-D4H" secondAttribute="leadingMargin" id="Fsr-jc-yus"/>
@@ -806,7 +806,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.1772384384" green="0.85165066899999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.25882352941176467" green="0.75686274509803919" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="wv6-Xz-8B0" secondAttribute="trailing" constant="8" id="98g-iK-AEM"/>
                                     <constraint firstAttribute="height" constant="64" id="Fse-nO-j4U"/>
@@ -871,7 +871,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4F-nb-aT4">
                                 <rect key="frame" x="16" y="317" width="343" height="33"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                <state key="normal" title="Sign Out"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" red="0.25882352939999997" green="0.75686274509999996" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="actionSignOutButtonTapped:" destination="DaH-7v-WTf" eventType="touchUpInside" id="nuu-8T-67S"/>
                                 </connections>
@@ -889,7 +891,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.1772384384" green="0.85165066899999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.25882352941176467" green="0.75686274509803919" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="3rC-uQ-Xq6"/>
                                     <constraint firstItem="ICR-7Y-Zrc" firstAttribute="leading" secondItem="EAj-kG-IdF" secondAttribute="leading" constant="8" id="Dwf-lh-dzx"/>

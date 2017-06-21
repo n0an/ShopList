@@ -13,9 +13,9 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var currencyTextField: UITextField!
     @IBOutlet weak var signOutButton: UIButton!
     
-    let currencyArray = ["$", "R"]
+    let currencyArray = ["$", "₽", "€"]
     
-    let currencyStringArray = ["USD, $", "RUB, R"]
+    let currencyStringArray = ["USD, $", "RUB, ₽", "EUR, €"]
     
     var currencyPickerView: UIPickerView!
     var currencyString = ""
@@ -133,20 +133,6 @@ extension SettingsViewController: UITextFieldDelegate {
         
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

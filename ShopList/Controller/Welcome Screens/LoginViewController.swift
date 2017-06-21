@@ -23,7 +23,7 @@ class LoginViewController: UIViewController {
         
         self.signInButton.layer.cornerRadius = 8
         self.signInButton.layer.borderWidth = 1
-        self.signInButton.layer.borderColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1).cgColor
+        self.signInButton.layer.borderColor = #colorLiteral(red: 0.2588235294, green: 0.7568627451, blue: 0.968627451, alpha: 1).cgColor
         
         self.signUpButton.layer.cornerRadius = 8
         self.signUpButton.layer.borderWidth = 1

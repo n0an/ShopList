@@ -30,6 +30,7 @@
 		1845A8EE1EF85CF700930F04 /* SearchItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1845A8ED1EF85CF700930F04 /* SearchItemViewController.swift */; };
 		1845A8F01EF85E9800930F04 /* GroceryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1845A8EF1EF85E9800930F04 /* GroceryItem.swift */; };
 		1845A8F21EF98DA400930F04 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1845A8F11EF98DA400930F04 /* SettingsViewController.swift */; };
+		18F79F8E1EFAF44600FCEF99 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 18F79F901EFAF44600FCEF99 /* InfoPlist.strings */; };
 		810605F4352DDEEB7F4360FE /* Pods_ShopList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81404F97068B4A0265F29BE8 /* Pods_ShopList.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,8 @@
 		1845A8ED1EF85CF700930F04 /* SearchItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchItemViewController.swift; sourceTree = "<group>"; };
 		1845A8EF1EF85E9800930F04 /* GroceryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryItem.swift; sourceTree = "<group>"; };
 		1845A8F11EF98DA400930F04 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		18F79F8F1EFAF44600FCEF99 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		18F79F911EFAF44D00FCEF99 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		68801C07C60A74982C25D409 /* Pods-ShopList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopList.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShopList/Pods-ShopList.release.xcconfig"; sourceTree = "<group>"; };
 		81404F97068B4A0265F29BE8 /* Pods_ShopList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShopList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84602FDDCC1713D08D990DC3 /* Pods-ShopList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShopList/Pods-ShopList.debug.xcconfig"; sourceTree = "<group>"; };
@@ -152,6 +155,7 @@
 			children = (
 				1830088A1EF5C0BF0047BBC5 /* AppDelegate.swift */,
 				15C02D3C1EFADCF1001A7C18 /* Localizable.strings */,
+				18F79F901EFAF44600FCEF99 /* InfoPlist.strings */,
 				1803C8DB1EF6C59E00012301 /* Model */,
 				1803C8E01EF6EB8B00012301 /* View */,
 				1803C8DD1EF6C5AC00012301 /* Controller */,
@@ -226,6 +230,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 1830087E1EF5C0BF0047BBC5;
 			productRefGroup = 183008881EF5C0BF0047BBC5 /* Products */;
@@ -243,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15C02D3A1EFADCF1001A7C18 /* Localizable.strings in Resources */,
+				18F79F8E1EFAF44600FCEF99 /* InfoPlist.strings in Resources */,
 				1803C8D21EF6BABC00012301 /* Info.plist in Resources */,
 				183008921EF5C0BF0047BBC5 /* Assets.xcassets in Resources */,
 				183008901EF5C0BF0047BBC5 /* Main.storyboard in Resources */,
@@ -344,6 +350,15 @@
 				15C02D371EFADCD9001A7C18 /* ru */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		18F79F901EFAF44600FCEF99 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18F79F8F1EFAF44600FCEF99 /* en */,
+				18F79F911EFAF44D00FCEF99 /* ru */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
