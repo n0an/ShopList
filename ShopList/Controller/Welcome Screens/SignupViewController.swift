@@ -17,6 +17,7 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var signupView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,8 @@ class SignupViewController: UIViewController {
         self.signUpButton.layer.cornerRadius = 8
         self.signUpButton.layer.borderWidth = 1
         self.signUpButton.layer.borderColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1).cgColor
+        
+        self.signupView.layer.cornerRadius = 8
     }
     
     func goToApp() {
@@ -40,7 +43,10 @@ class SignupViewController: UIViewController {
         
     }
     
-    // TODO: - dismiss keyboard button
+    
+    @IBAction func actionDismissKeyboardButtonTapped(_ sender: Any) {
+        self.view.endEditing(true)
+    }
     
     @IBAction func actionSignUpButtonTapped(_ sender: Any) {
         

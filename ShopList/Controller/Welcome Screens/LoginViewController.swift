@@ -29,6 +29,8 @@ class LoginViewController: UIViewController {
         self.signUpButton.layer.borderWidth = 1
         self.signUpButton.layer.borderColor = UIColor.white.cgColor
         
+        self.loginView.layer.cornerRadius = 8
+        
         
     }
     
@@ -66,7 +68,10 @@ class LoginViewController: UIViewController {
         }
         
     }
-    // TODO: - button to dismiss keyboard
+    
+    @IBAction func actionKeyboardDismissButtonTapped(_ sender: Any) {
+        self.view.endEditing(true)
+    }
     
     @IBAction func actionForgotButtonTapped(_ sender: Any) {
         

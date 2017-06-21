@@ -443,6 +443,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MPW-Ra-bzj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="actionDismissKeyboardButtonTapped:" destination="olU-aN-VAn" eventType="touchUpInside" id="782-Tq-Nub"/>
+                                    <action selector="actionKeyboardDismissButtonTapped:" destination="KQd-ZI-5He" eventType="touchUpInside" id="oCr-AK-qvZ"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UGV-C1-h1p">
                                 <rect key="frame" x="62" y="158" width="250" height="187"/>
                                 <subviews>
@@ -546,6 +554,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPh-u8-pBf">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <action selector="actionDismissKeyboardButtonTapped:" destination="olU-aN-VAn" eventType="touchUpInside" id="4Og-wb-pNX"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KtW-yR-qNb">
                                 <rect key="frame" x="62" y="158" width="250" height="233"/>
                                 <subviews>
@@ -627,9 +641,13 @@
                         <color key="backgroundColor" red="0.25882352941176467" green="0.75686274509803919" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="KtW-yR-qNb" firstAttribute="top" secondItem="Vog-Vd-upM" secondAttribute="bottom" constant="138" id="BXA-zQ-M86"/>
+                            <constraint firstItem="uPh-u8-pBf" firstAttribute="top" secondItem="Dpb-Vx-D4H" secondAttribute="top" id="F91-eL-NTZ"/>
                             <constraint firstItem="dLB-CL-Esr" firstAttribute="leading" secondItem="Dpb-Vx-D4H" secondAttribute="leadingMargin" id="Fsr-jc-yus"/>
+                            <constraint firstItem="uPh-u8-pBf" firstAttribute="leading" secondItem="Dpb-Vx-D4H" secondAttribute="leading" id="RXF-rg-jAD"/>
+                            <constraint firstAttribute="trailing" secondItem="uPh-u8-pBf" secondAttribute="trailing" id="ffR-Hg-Z07"/>
                             <constraint firstItem="dLB-CL-Esr" firstAttribute="trailing" secondItem="Dpb-Vx-D4H" secondAttribute="trailingMargin" id="ny3-Y2-vQg"/>
                             <constraint firstItem="HSJ-HR-eQs" firstAttribute="top" secondItem="dLB-CL-Esr" secondAttribute="bottom" constant="8" id="osP-uN-CA9"/>
+                            <constraint firstItem="HSJ-HR-eQs" firstAttribute="top" secondItem="uPh-u8-pBf" secondAttribute="bottom" id="tFh-zJ-gGi"/>
                             <constraint firstItem="KtW-yR-qNb" firstAttribute="centerX" secondItem="Dpb-Vx-D4H" secondAttribute="centerX" id="vlG-mO-dVh"/>
                         </constraints>
                     </view>
@@ -640,11 +658,12 @@
                         <outlet property="passwordTextField" destination="o5p-Ua-WxB" id="Kou-6u-5LI"/>
                         <outlet property="signInButton" destination="dLB-CL-Esr" id="tBd-8U-IPg"/>
                         <outlet property="signUpButton" destination="mx6-7w-ehy" id="TNq-Z2-QVf"/>
+                        <outlet property="signupView" destination="KtW-yR-qNb" id="VKF-Cf-XyO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="exQ-ci-lC9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1161" y="36"/>
+            <point key="canvasLocation" x="-1162.4000000000001" y="35.532233883058474"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="0Ft-Fz-Ezg">
