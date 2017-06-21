@@ -1,0 +1,132 @@
+
+/* Class = "UILabel"; text = "Currency"; ObjectID = "3Gn-yq-D6m"; */
+"3Gn-yq-D6m.text" = "Валюта";
+
+/* Class = "UITextField"; placeholder = "Extra Info"; ObjectID = "44K-la-95p"; */
+"44K-la-95p.placeholder" = "Доп инфо";
+
+/* Class = "UILabel"; text = "18/06/2017"; ObjectID = "5rA-ri-lIx"; */
+"5rA-ri-lIx.text" = "18/06/2017";
+
+/* Class = "UILabel"; text = "3 items"; ObjectID = "6uv-o8-Q12"; */
+"6uv-o8-Q12.text" = "3 items";
+
+/* Class = "UITextField"; placeholder = "Last Name"; ObjectID = "7QB-3V-vOd"; */
+"7QB-3V-vOd.placeholder" = "Фамилия";
+
+/* Class = "UITabBarItem"; title = "My List"; ObjectID = "9iy-Qj-qkw"; */
+"9iy-Qj-qkw.title" = "Мой список";
+
+/* Class = "UILabel"; text = "Price"; ObjectID = "AnC-aD-Hcf"; */
+"AnC-aD-Hcf.text" = "Цена";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "BCT-j0-oI5"; */
+"BCT-j0-oI5.text" = "Детали";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "Egg-tm-NVo"; */
+"Egg-tm-NVo.placeholder" = "Email";
+
+/* Class = "UILabel"; text = "Add Item"; ObjectID = "FnR-YA-37P"; */
+"FnR-YA-37P.text" = "Добавить покупку";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "FvL-3D-4oj"; */
+"FvL-3D-4oj.text" = "Детали";
+
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "Fzf-PA-qd3"; */
+"Fzf-PA-qd3.placeholder" = "Имя";
+
+/* Class = "UILabel"; text = "Settings"; ObjectID = "ICR-7Y-Zrc"; */
+"ICR-7Y-Zrc.text" = "Настройки";
+
+/* Class = "UITextField"; placeholder = "Price"; ObjectID = "KMn-3H-dpZ"; */
+"KMn-3H-dpZ.placeholder" = "Цена";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "LGx-Cp-heF"; */
+"LGx-Cp-heF.text" = "Имя";
+
+/* Class = "UILabel"; text = "Total price"; ObjectID = "LRu-xC-Ixm"; */
+"LRu-xC-Ixm.text" = "Полная стоимость";
+
+/* Class = "UILabel"; text = "Sign Up"; ObjectID = "LZQ-BF-xJM"; */
+"LZQ-BF-xJM.text" = "Создать учетную запись";
+
+/* Class = "UIButton"; normalTitle = "Sign Up"; ObjectID = "TqF-tv-tkO"; */
+"TqF-tv-tkO.normalTitle" = "Создать учетную запись";
+
+/* Class = "UIButton"; normalTitle = "Forgot password?"; ObjectID = "TtL-Nr-zQ4"; */
+"TtL-Nr-zQ4.normalTitle" = "Забыли пароль?";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "XfX-Cz-QFQ"; */
+"XfX-Cz-QFQ.text" = "Имя";
+
+/* Class = "UITextField"; placeholder = "Currency"; ObjectID = "Y3a-Qm-zRd"; */
+"Y3a-Qm-zRd.placeholder" = "Валюта";
+
+/* Class = "UITabBarItem"; title = "Settings"; ObjectID = "YBf-Cj-DkG"; */
+"YBf-Cj-DkG.title" = "Настройки";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "ZLJ-4M-dd6"; */
+"ZLJ-4M-dd6.normalTitle" = "Отмена";
+
+/* Class = "UINavigationItem"; title = "Shopping Items"; ObjectID = "ag1-zz-RVU"; */
+"ag1-zz-RVU.title" = "Покупки";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "bSf-QU-iMg"; */
+"bSf-QU-iMg.normalTitle" = "Отмена";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "cNE-2y-uND"; */
+"cNE-2y-uND.text" = "Имя";
+
+/* Class = "UIButton"; normalTitle = "Sign In"; ObjectID = "dLB-CL-Esr"; */
+"dLB-CL-Esr.normalTitle" = "Войти";
+
+/* Class = "UILabel"; text = "Total Price"; ObjectID = "eEb-E8-HR5"; */
+"eEb-E8-HR5.text" = "Полная стоимость";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "fNi-2A-ah3"; */
+"fNi-2A-ah3.text" = "1";
+
+/* Class = "UITabBarItem"; title = "My Items"; ObjectID = "fR5-7B-oJ7"; */
+"fR5-7B-oJ7.title" = "Мои покупки";
+
+/* Class = "UIButton"; normalTitle = "Sign Out"; ObjectID = "g4F-nb-aT4"; */
+"g4F-nb-aT4.normalTitle" = "Выйти";
+
+/* Class = "UILabel"; text = "Items label"; ObjectID = "hef-R7-sdC"; */
+"hef-R7-sdC.text" = "Наименование";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "k8T-rt-dXh"; */
+"k8T-rt-dXh.placeholder" = "Пароль";
+
+/* Class = "UIButton"; normalTitle = "Sign In"; ObjectID = "kW2-gf-VxP"; */
+"kW2-gf-VxP.normalTitle" = "Войти";
+
+/* Class = "UITextField"; placeholder = "Quantity"; ObjectID = "lWX-4p-Beb"; */
+"lWX-4p-Beb.placeholder" = "Количество";
+
+/* Class = "UIButton"; normalTitle = "Sign Up"; ObjectID = "mx6-7w-ehy"; */
+"mx6-7w-ehy.normalTitle" = "Создать учетную запись";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "o5p-Ua-WxB"; */
+"o5p-Ua-WxB.placeholder" = "Пароль";
+
+/* Class = "UITextField"; placeholder = "First Name"; ObjectID = "oLe-Q4-gKC"; */
+"oLe-Q4-gKC.placeholder" = "Имя";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "sQf-Uc-WSH"; */
+"sQf-Uc-WSH.normalTitle" = "Сохранить";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "sbi-cL-2yF"; */
+"sbi-cL-2yF.placeholder" = "Email";
+
+/* Class = "UILabel"; text = "Sign In"; ObjectID = "seS-XX-dKO"; */
+"seS-XX-dKO.text" = "Войти";
+
+/* Class = "UILabel"; text = "Price"; ObjectID = "vhc-f8-Gfw"; */
+"vhc-f8-Gfw.text" = "Цена";
+
+/* Class = "UINavigationItem"; title = "All Lists"; ObjectID = "wgW-st-b8d"; */
+"wgW-st-b8d.title" = "Все списки";
+
+/* Class = "UILabel"; text = "Search Items"; ObjectID = "wv6-Xz-8B0"; */
+"wv6-Xz-8B0.text" = "Поиск покупок";
