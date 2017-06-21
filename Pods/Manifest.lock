@@ -1,4 +1,7 @@
 PODS:
+  - Crashlytics (3.8.4):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.11)
   - Firebase/Auth (4.0.2):
     - Firebase/Core
     - FirebaseAuth (= 4.0.0)
@@ -39,6 +42,8 @@ PODS:
   - SwipeCellKit (1.9.0)
 
 DEPENDENCIES:
+  - Crashlytics
+  - Fabric
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
@@ -56,6 +61,8 @@ CHECKOUT OPTIONS:
     :git: https://github.com/jerkoch/SwipeCellKit.git
 
 SPEC CHECKSUMS:
+  Crashlytics: 79e236942ca1e7fc641df1feb9a275360a78ab6a
+  Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
   Firebase: c7ad0731eab26d18a3fc547dd048b0f7cd9c63ae
   FirebaseAnalytics: 4d7040fefc3cd8b291cde35f12cf063d7963f15d
   FirebaseAuth: ebb6abcbabae00fc47446d690c19ce68d8484fde
@@ -68,6 +75,6 @@ SPEC CHECKSUMS:
   KRProgressHUD: 14f9fad06080bdb1e59569104a8eda654c83e813
   SwipeCellKit: c5199021f354565c955fe8e2f45f79d3b1713e41
 
-PODFILE CHECKSUM: e26416cd7febcabdeaa2ccbe5047e03e536e2c42
+PODFILE CHECKSUM: c1376c00975ebbffcfc4686704a98313a7c9629d
 
 COCOAPODS: 1.1.1

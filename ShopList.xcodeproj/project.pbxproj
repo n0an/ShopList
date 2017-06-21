@@ -201,6 +201,7 @@
 				183008851EF5C0BF0047BBC5 /* Resources */,
 				8B2EAA00E4D5E7558159C133 /* [CP] Embed Pods Frameworks */,
 				05E6E195FCBA18417389D526 /* [CP] Copy Pods Resources */,
+				18F79F941EFB17A100FCEF99 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -277,6 +278,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShopList/Pods-ShopList-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		18F79F941EFB17A100FCEF99 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 2342fff18263bccec612d2b7cb71b96ae031a1cd 83ffef7c03e06b05b58b9cb24dc8f4d41dc68d0128eb4cb32b5421d9faebbcfb";
 		};
 		8B2EAA00E4D5E7558159C133 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;

@@ -14,4 +14,7 @@ pod 'Firebase/Auth'
 pod 'KRProgressHUD'
 pod 'SwipeCellKit', :git => 'https://github.com/jerkoch/SwipeCellKit.git', :branch => 'develop'
 
+pod 'Fabric'
+pod 'Crashlytics'
+
 end
