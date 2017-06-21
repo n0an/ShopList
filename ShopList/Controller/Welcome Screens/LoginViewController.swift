@@ -48,7 +48,7 @@ class LoginViewController: UIViewController {
             return
         }
         
-        KRProgressHUD.showMessage("Signing in...")
+        KRProgressHUD.showMessage(NSLocalizedString("Signing in...", comment: ""))
         
         FUser.loginUserWith(email: emailTextField.text!, password: passwordTextField.text!) { (error) in
             if let error = error {
@@ -71,7 +71,7 @@ class LoginViewController: UIViewController {
     @IBAction func actionForgotButtonTapped(_ sender: Any) {
         
         guard emailTextField.text != "" else {
-            KRProgressHUD.showError(withMessage: "Email empty")
+            KRProgressHUD.showError(withMessage: NSLocalizedString("Email empty", comment: ""))
             return
         }
         

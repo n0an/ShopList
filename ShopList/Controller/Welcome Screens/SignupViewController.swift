@@ -45,11 +45,11 @@ class SignupViewController: UIViewController {
     @IBAction func actionSignUpButtonTapped(_ sender: Any) {
         
         guard emailTextField.text != "" && passwordTextField.text != ""  && firstNameTextField.text != "" && lastNameTextField.text != "" else {
-            KRProgressHUD.showError(withMessage: "All fields are required")
+            KRProgressHUD.showError(withMessage: NSLocalizedString("All fields are required", comment: ""))
             return
         }
         
-        KRProgressHUD.showMessage("Signing Up...")
+        KRProgressHUD.showMessage(NSLocalizedString("Signing in...", comment: ""))
         
         FUser.registerUserWith(email: emailTextField.text!, password: passwordTextField.text!, firstName: firstNameTextField.text!, lastName: lastNameTextField.text!) { (error) in
             if let error = error {

@@ -85,13 +85,13 @@ class AddItemViewController: UIViewController {
     }
     
     func showListNotification(shoppingItem: ShoppingItem) {
-        let alert = UIAlertController(title: "Shopping Items", message: "Do you want to add this item to your items", preferredStyle: .alert)
+        let alert = UIAlertController(title: NSLocalizedString("Shopping Items", comment: ""), message: NSLocalizedString("Do you want to add this item to your items", comment: ""), preferredStyle: .alert)
         
-        let noAction = UIAlertAction(title: "No", style: .cancel) { (action) in
+        let noAction = UIAlertAction(title: NSLocalizedString("No", comment: ""), style: .cancel) { (action) in
             self.dismiss(animated: true, completion: nil)
         }
         
-        let yesAction = UIAlertAction(title: "Yes", style: .destructive) { (action) in
+        let yesAction = UIAlertAction(title: NSLocalizedString("Yes", comment: ""), style: .destructive) { (action) in
             // save to grocery list
             
             let groceryItem = GroceryItem(shoppingItem: shoppingItem)
@@ -228,19 +228,19 @@ class AddItemViewController: UIViewController {
         
         let optionMenu = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
-        let takePhotoAction = UIAlertAction(title: "Take Photo", style: .default) { (action) in
+        let takePhotoAction = UIAlertAction(title: NSLocalizedString("Take Photo", comment: ""), style: .default) { (action) in
             // show camera
             let camera = Camera(delegate_: self)
             camera.PresentPhotoCamera(target: self, canEdit: true)
         }
         
-        let sharePhotoAction = UIAlertAction(title: "Photo Library", style: .default) { (action) in
+        let sharePhotoAction = UIAlertAction(title: NSLocalizedString("Photo Library", comment: ""), style: .default) { (action) in
             // from library
             let camera = Camera(delegate_: self)
             camera.PresentPhotoLibrary(target: self, canEdit: true)
         }
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: nil)
         
         optionMenu.addAction(takePhotoAction)
         optionMenu.addAction(sharePhotoAction)

@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Auth.auth().addStateDidChangeListener { (auth, user) in
             
-            if let user = user {
+            if user != nil {
                 if userDefaults.object(forKey: kCURRENTUSER) != nil {
                     self.goToApp()
                 }

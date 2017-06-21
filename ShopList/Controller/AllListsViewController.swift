@@ -42,17 +42,17 @@ class AllListsViewController: UIViewController {
     // MARK: - ACTIONS
     @IBAction func actionAddButtonTapped(_ sender: Any) {
         
-        let alert = UIAlertController(title: "Create Shopping List", message: "Enter the shopping list name", preferredStyle: .alert)
+        let alert = UIAlertController(title: NSLocalizedString("Create Shopping List", comment: ""), message: NSLocalizedString("Enter the shopping list name", comment: ""), preferredStyle: .alert)
         
         alert.addTextField { (nameTextField) in
-            nameTextField.placeholder = "Name"
+            nameTextField.placeholder = NSLocalizedString("Name", comment: "")
             self.nameTextField = nameTextField
             
         }
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: nil)
         
-        let okAction = UIAlertAction(title: "Save", style: .default) { (action) in
+        let okAction = UIAlertAction(title: NSLocalizedString("Save", comment: ""), style: .default) { (action) in
             if self.nameTextField.text != "" {
                 self.createShoppingList()
             } else {

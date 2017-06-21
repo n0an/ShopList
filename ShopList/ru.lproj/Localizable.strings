@@ -5,3 +5,37 @@
   Created by nag on 21/06/2017.
   Copyright © 2017 Anton Novoselov. All rights reserved.
 */
+"Create Shopping List" = "Создать список покупок";
+"Enter the shopping list name" = "Введите название списка";
+"Cancel" = "Отмена";
+"Save" = "Сохранить";
+"Name" = "Название";
+
+"Shopping Items" = "Покупки";
+"Do you want to add this item to your items" = "Хотите добавить эту покупку в список ваших покупок?";
+"No" = "Нет";
+"Yes" = "Да";
+
+"Take Photo" = "Сделать снимок";
+"Photo Library" = "Выбрать из галереи";
+
+"New Item" = "Новая покупка";
+"Search Item" = "Найти покупки";
+
+"SHOPPING LIST" = "КУПИТЬ";
+"BOUGHT LIST" = "КУПЛЕНО";
+
+"Buy" = "Купить";
+"Return" = "Вернуть";
+
+"Total Price: " = "Общая стоимость: ";
+"Items Left: " = "Покупок осталось:";
+
+"items" = "покупок";
+
+"Signing in..." = "Заходим";
+"Email empty" = "Введите Email";
+"All fields are required" = "Заполните все поля";
+
+
+

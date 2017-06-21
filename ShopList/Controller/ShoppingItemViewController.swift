@@ -76,9 +76,9 @@ class ShoppingItemViewController: UIViewController {
             currency = curr
         }
         
-        self.itemsLeftLabel.text = "Items Left: \(self.shoppingItems.count)"
+        self.itemsLeftLabel.text = NSLocalizedString("Items Left: ", comment: "") + "\(self.shoppingItems.count)"
         let formattedTotalPrice = String(format: "%.2f", self.totalPrice)
-        self.totalPriceLabel.text = "Total Price: \(currency) \(formattedTotalPrice)"
+        self.totalPriceLabel.text = NSLocalizedString("Total Price: ", comment: "") + "\(currency) \(formattedTotalPrice)"
         
         
         self.tableView.reloadData()
@@ -115,7 +115,7 @@ class ShoppingItemViewController: UIViewController {
         
         let optionMenu = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
-        let newItemAction = UIAlertAction(title: "New Item", style: .default) { (action) in
+        let newItemAction = UIAlertAction(title: NSLocalizedString("New Item", comment: ""), style: .default) { (action) in
             let addItemVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddItemViewController") as! AddItemViewController
             
             addItemVC.shoppingList = self.shoppingList
@@ -124,7 +124,7 @@ class ShoppingItemViewController: UIViewController {
             self.present(addItemVC, animated: true, completion: nil)
         }
         
-        let searchItemAction = UIAlertAction(title: "Search Item", style: .default) { (action) in
+        let searchItemAction = UIAlertAction(title: NSLocalizedString("Search Item", comment: ""), style: .default) { (action) in
             
             let searchVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SearchItemViewController") as! SearchItemViewController
             
@@ -134,7 +134,7 @@ class ShoppingItemViewController: UIViewController {
             self.present(searchVC, animated: true, completion: nil)
         }
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: nil)
         
         optionMenu.addAction(newItemAction)
         optionMenu.addAction(searchItemAction)
@@ -213,9 +213,9 @@ extension ShoppingItemViewController: UITableViewDelegate {
         var title: String
         
         if section == 0 {
-            title = "SHOPPING LIST"
+            title = NSLocalizedString("SHOPPING LIST", comment: "")
         } else {
-            title = "BOUGHT LIST"
+            title = NSLocalizedString("BOUGHT LIST", comment: "")
         }
         
         return titleViewForTable(title: title)
@@ -304,7 +304,7 @@ extension ShoppingItemViewController: SwipeTableViewCellDelegate {
                 tableView.reloadData()
             })
             
-            buyItem.accessibilityLabel = shoppingItem.isBought ? "Buy" : "Return"
+            buyItem.accessibilityLabel = shoppingItem.isBought ? NSLocalizedString("Buy", comment: "") : NSLocalizedString("Return", comment: "")
             let descriptor: ActionDescriptor = shoppingItem.isBought ? .returnPurchase : .buy
             
             configure(action: buyItem, with: descriptor)
