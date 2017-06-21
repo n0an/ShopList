@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bbl-jY-0Kv">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EX6-Ij-Q3t">
+            <objects>
+                <viewController id="bbl-jY-0Kv" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gGn-ZS-gKH"/>
+                        <viewControllerLayoutGuide type="bottom" id="4zy-KL-jp6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EFa-fI-1Pu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash" translatesAutoresizingMaskIntoConstraints="NO" id="TbI-pE-Znq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TbI-pE-Znq" firstAttribute="leading" secondItem="EFa-fI-1Pu" secondAttribute="leading" id="J9c-6U-ERC"/>
+                            <constraint firstItem="TbI-pE-Znq" firstAttribute="top" secondItem="EFa-fI-1Pu" secondAttribute="top" id="S9T-1a-X7r"/>
+                            <constraint firstItem="4zy-KL-jp6" firstAttribute="top" secondItem="TbI-pE-Znq" secondAttribute="bottom" id="ncu-sg-25E"/>
+                            <constraint firstAttribute="trailing" secondItem="TbI-pE-Znq" secondAttribute="trailing" id="npr-gT-1AG"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dz8-rM-KFJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="520.79999999999995" y="3396.2518740629689"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Splash" width="750" height="1334"/>
+    </resources>
+</document>
