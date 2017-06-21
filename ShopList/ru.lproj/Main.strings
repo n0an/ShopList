@@ -27,13 +27,13 @@
 "Egg-tm-NVo.placeholder" = "Email";
 
 /* Class = "UILabel"; text = "Add Item"; ObjectID = "FnR-YA-37P"; */
-"FnR-YA-37P.text" = "Добавить покупку";
+"FnR-YA-37P.text" = "Добавить";
 
 /* Class = "UILabel"; text = "Detail"; ObjectID = "FvL-3D-4oj"; */
 "FvL-3D-4oj.text" = "Детали";
 
 /* Class = "UITextField"; placeholder = "Name"; ObjectID = "Fzf-PA-qd3"; */
-"Fzf-PA-qd3.placeholder" = "Имя";
+"Fzf-PA-qd3.placeholder" = "Наименование";
 
 /* Class = "UILabel"; text = "Settings"; ObjectID = "ICR-7Y-Zrc"; */
 "ICR-7Y-Zrc.text" = "Настройки";

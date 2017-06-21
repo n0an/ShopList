@@ -303,11 +303,11 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WbI-bZ-gxA">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQf-Uc-WSH">
-                                        <rect key="frame" x="321" y="28" width="46" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQf-Uc-WSH">
+                                        <rect key="frame" x="266" y="28" width="101" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="rt2-hj-7P5"/>
-                                            <constraint firstAttribute="width" constant="46" id="usL-Ci-g1v"/>
+                                            <constraint firstAttribute="width" constant="101" id="usL-Ci-g1v"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Save">
@@ -317,10 +317,10 @@
                                             <action selector="actionSaveButtonTapped:" destination="Wt8-1e-FfD" eventType="touchUpInside" id="Zs5-Nk-xnZ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZLJ-4M-dd6">
-                                        <rect key="frame" x="8" y="28" width="51" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZLJ-4M-dd6">
+                                        <rect key="frame" x="8" y="28" width="98" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="51" id="D1j-bJ-dBn"/>
+                                            <constraint firstAttribute="width" constant="98" id="D1j-bJ-dBn"/>
                                             <constraint firstAttribute="height" constant="30" id="YqN-dg-e9a"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -791,9 +791,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSf-QU-iMg">
-                                        <rect key="frame" x="8" y="28" width="51" height="30"/>
+                                        <rect key="frame" x="8" y="28" width="88" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="51" id="NW3-RY-Dun"/>
+                                            <constraint firstAttribute="width" constant="88" id="NW3-RY-Dun"/>
                                             <constraint firstAttribute="height" constant="30" id="WQJ-gk-Uhz"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
