@@ -22,10 +22,18 @@ class AllListsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if #available(iOS 11.0, *) {
+            navigationController?.navigationBar.prefersLargeTitles = true   
+        }
+        
+        navigationItem.hidesBackButton = true
+        
         KRProgressHUD.dismiss()
         
         loadList()
     }
+    
+    
     
     // MARK: - HELPER METHODS
     func createShoppingList() {
@@ -38,7 +46,7 @@ class AllListsViewController: UIViewController {
             }
         }
     }
-
+    
     // MARK: - ACTIONS
     @IBAction func actionAddButtonTapped(_ sender: Any) {
         

@@ -27,15 +27,20 @@ class ShoppingItemViewController: UIViewController {
     
     var totalPrice: Float!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         totalPrice = shoppingList.totalPrice
         
+        if #available(iOS 11.0, *) {
+            navigationController?.navigationBar.prefersLargeTitles = true
+        }
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "BackArrow"), style: .done, target: self, action: #selector(self.goback))
+        
         loadShoppingItems()
     }
+    
     
     // MARK: - HELPER METHODS
     func loadShoppingItems() {
@@ -109,6 +114,11 @@ class ShoppingItemViewController: UIViewController {
             }
         }
     }
+    
+    @objc func goback() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     
     // MARK: - ACTIONS
     @IBAction func actionAddButtonTapped(_ sender: Any) {
