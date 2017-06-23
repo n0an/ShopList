@@ -86,6 +86,8 @@ class SearchItemViewController: UIViewController {
         
         addItemVC.addingToList = true
         
+        addItemVC.fromGroceries = true
+        
         self.present(addItemVC, animated: true, completion: nil)
         
     }
@@ -158,6 +160,8 @@ extension SearchItemViewController: UITableViewDelegate {
             let addItemVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddItemViewController") as! AddItemViewController
             
             addItemVC.groceryItem = item
+            
+            addItemVC.fromGroceries = true
             
             self.present(addItemVC, animated: true, completion: nil)
         }

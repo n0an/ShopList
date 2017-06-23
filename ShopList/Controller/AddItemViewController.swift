@@ -25,6 +25,8 @@ class AddItemViewController: UIViewController {
     
     var addingToList: Bool?
     
+    var fromGroceries: Bool!
+    
     // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +36,16 @@ class AddItemViewController: UIViewController {
         
         if shoppingItem != nil || groceryItem != nil {
             updateUI()
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if fromGroceries == true {
+            quantityTextField.isHidden = true
+        } else {
+            quantityTextField.isHidden = false
         }
     }
     
@@ -215,8 +227,6 @@ class AddItemViewController: UIViewController {
         } else {
             KRProgressHUD.showWarning(withMessage: "Empty fields")
         }
-        
-//        self.dismiss(animated: true, completion: nil)
         
     }
     

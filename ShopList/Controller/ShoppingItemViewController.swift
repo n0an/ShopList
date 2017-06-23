@@ -131,6 +131,8 @@ class ShoppingItemViewController: UIViewController {
             addItemVC.shoppingList = self.shoppingList
             addItemVC.addingToList = false
             
+            addItemVC.fromGroceries = false
+            
             self.present(addItemVC, animated: true, completion: nil)
         }
         
@@ -255,6 +257,8 @@ extension ShoppingItemViewController: UITableViewDelegate {
         
         addItemVC.shoppingList = shoppingList
         addItemVC.shoppingItem = shoppingItem
+        
+        addItemVC.fromGroceries = false
         
         self.present(addItemVC, animated: true, completion: nil)
         
