@@ -492,6 +492,7 @@
 			baseConfigurationReference = 84602FDDCC1713D08D990DC3 /* Pods-ShopList.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 358V8FBM3U;
 				INFOPLIST_FILE = ShopList/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
