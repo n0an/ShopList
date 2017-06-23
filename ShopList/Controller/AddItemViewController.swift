@@ -261,7 +261,10 @@ class AddItemViewController: UIViewController {
     }
     
     
-
+    @IBAction func actionKeyboardDismiss(_ sender: Any) {
+        self.view.endEditing(true)
+    }
+    
 }
 
 // MARK: - UIImagePickerControllerDelegate
