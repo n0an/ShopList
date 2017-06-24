@@ -376,7 +376,7 @@
                                 <rect key="frame" x="16" y="301" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ShoppingCartEmpty" translatesAutoresizingMaskIntoConstraints="NO" id="pcf-SQ-501">
                                 <rect key="frame" x="157" y="92" width="60" height="60"/>
@@ -400,7 +400,7 @@
                                 <rect key="frame" x="16" y="263" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -703,9 +703,12 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tag-ha-3nN" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="My List" image="ShoppingCartFilled" id="9iy-Qj-qkw"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dBx-0G-W0Z">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="dBx-0G-W0Z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
