@@ -147,7 +147,7 @@ func toDictionary(user: FUser) -> [String: Any] {
 
 func fetchUser(userId: String, completion: @escaping (_ success: Bool) -> Void) {
     
-    firebase.child(kUSER).queryOrdered(byChild: kOBJECTID).queryEqual(toValue: userId).observe(.value) { (snapshot) in
+    firebase.child(kUSER).queryOrdered(byChild: kOBJECTID).queryEqual(toValue: userId).observe(.value, with: { (snapshot) in
         
         
         if snapshot.exists() {
@@ -169,7 +169,7 @@ func fetchUser(userId: String, completion: @escaping (_ success: Bool) -> Void) 
         }
         
         
-    }
+    })
     
     
 }

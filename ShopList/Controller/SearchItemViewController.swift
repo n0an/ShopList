@@ -57,7 +57,7 @@ class SearchItemViewController: UIViewController {
     
     // MARK: - HELPER METHODS
     func loadGroceryItems() {
-        firebase.child(kGROCERYITEM).child(FUser.currentId()).observe(.value) { (snapshot) in
+        firebase.child(kGROCERYITEM).child(FUser.currentId()).observe(.value, with: { (snapshot) in
             
             self.groceryItems.removeAll()
             
@@ -75,7 +75,7 @@ class SearchItemViewController: UIViewController {
             } else {
                 print("no snap")
             }
-        }
+        })
     }
     
     

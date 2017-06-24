@@ -32,9 +32,6 @@ class ShoppingItemViewController: UIViewController {
         
         totalPrice = shoppingList.totalPrice
         
-        if #available(iOS 11.0, *) {
-            navigationController?.navigationBar.prefersLargeTitles = true
-        }
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "BackArrow"), style: .done, target: self, action: #selector(self.goback))
         
@@ -44,7 +41,7 @@ class ShoppingItemViewController: UIViewController {
     
     // MARK: - HELPER METHODS
     func loadShoppingItems() {
-        firebase.child(kSHOPPINGITEM).child(shoppingList.id).queryOrdered(byChild: kSHOPPINGLISTID).queryEqual(toValue: shoppingList.id).observe(.value) { (snapshot) in
+        firebase.child(kSHOPPINGITEM).child(shoppingList.id).queryOrdered(byChild: kSHOPPINGLISTID).queryEqual(toValue: shoppingList.id).observe(.value, with: { (snapshot) in
             
             self.shoppingItems.removeAll()
             self.boughtItems.removeAll()
@@ -70,7 +67,7 @@ class ShoppingItemViewController: UIViewController {
             } else {
                 print("no snap")
             }
-        }
+        })
     }
     
     func updateUI() {

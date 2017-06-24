@@ -22,10 +22,6 @@ class AllListsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if #available(iOS 11.0, *) {
-            navigationController?.navigationBar.prefersLargeTitles = true   
-        }
-        
         navigationItem.hidesBackButton = true
         
         KRProgressHUD.dismiss()
@@ -79,7 +75,7 @@ class AllListsViewController: UIViewController {
     
     func loadList() {
         
-        firebase.child(kSHOPPINGLIST).child(FUser.currentId()).observe(.value) { (snapshot) in
+        firebase.child(kSHOPPINGLIST).child(FUser.currentId()).observe(.value, with: { (snapshot) in
             
             self.allLists.removeAll()
             
@@ -98,7 +94,7 @@ class AllListsViewController: UIViewController {
             } else {
                 print("no snap")
             }
-        }
+        })
     }
     
     // MARK: - NAVIGATION
