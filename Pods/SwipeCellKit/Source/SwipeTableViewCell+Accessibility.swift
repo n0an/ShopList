@@ -64,7 +64,7 @@ extension SwipeTableViewCell {
         }
     }
     
-    @objc func performAccessibilityCustomAction(accessibilityCustomAction: SwipeAccessibilityCustomAction) -> Bool {
+    func performAccessibilityCustomAction(accessibilityCustomAction: SwipeAccessibilityCustomAction) -> Bool {
         guard let tableView = tableView else { return false }
         
         let swipeAction = accessibilityCustomAction.action

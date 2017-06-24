@@ -114,7 +114,7 @@ open class SwipeTableViewCell: UITableViewCell {
         }
     }
     
-    @objc func handlePan(gesture: UIPanGestureRecognizer) {
+    func handlePan(gesture: UIPanGestureRecognizer) {
         guard isEditing == false else { return }
         guard let target = gesture.view else { return }
         
@@ -319,11 +319,11 @@ open class SwipeTableViewCell: UITableViewCell {
         }
     }
 
-    @objc func handleTap(gesture: UITapGestureRecognizer) {
+    func handleTap(gesture: UITapGestureRecognizer) {
         hideSwipe(animated: true)
     }
     
-    @objc func handleTablePan(gesture: UIPanGestureRecognizer) {
+    func handleTablePan(gesture: UIPanGestureRecognizer) {
         if gesture.state == .began {
             hideSwipe(animated: true)
         }

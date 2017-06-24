@@ -139,10 +139,8 @@ private extension KRActivityIndicatorView {
       let paths = KRActivityIndicatorPath.getPath(isLarge: isLarge)
       let colors = style.getGradientColors(dividedIn: paths.count)
 
-    paths.enumerated().forEach { (arg) in
-        
-        let (index, path) = arg
-        let pathLayer = CAShapeLayer()
+      paths.enumerated().forEach { index, path in
+         let pathLayer = CAShapeLayer()
          pathLayer.frame = animationLayer.bounds
          pathLayer.fillColor = colors[index].cgColor
          pathLayer.lineWidth = 0
